@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function SpecificVerse() {
-  const [query, setQuery] = useState('Ezekiel 38:21');
+  const [query, setQuery] = useState('John 3:16');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -13,7 +13,7 @@ export default function SpecificVerse() {
 
     const cleanedQuery = query.trim().replace(/\s+/g, ' ');
     if (cleanedQuery.length < 3) {
-      setError('Please enter a valid passage (e.g., "Ezekiel 38:21").');
+      setError('Please enter a valid passage (e.g., "John 3:16").');
       return;
     }
 
