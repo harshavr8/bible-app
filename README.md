@@ -14,7 +14,7 @@ A minimal React + Vite application that fetches Bible verses using the [NET Bibl
 
 1. Clone the repo:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/harshavr8/bible-app.git
    cd bible-app
 2. Install dependencies:
   ```npm install```
