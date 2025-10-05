@@ -1,0 +1,198 @@
+/* Root variables for easy theming */
+:root {
+  --bg: #fff;                /* Main background color */
+  --surface: #fff;           /* Card and surface background */
+  --border: #e6e8eb;         /* Border color for cards and inputs */
+  --text: #111827;           /* Main text color */
+  --muted: #6b7280;          /* Muted/secondary text */
+  --accent: #2563eb;         /* Accent blue (blue-600) */
+  --accent-ink: #0b1b3a;     /* Contrast color for text on accent backgrounds */
+  --err: #b91c1c;            /* Error color */
+  --radius: 12px;            /* Default border radius */
+}
+
+/* Apply border-box sizing everywhere */
+* {
+  box-sizing: border-box;
+}
+
+/* Make sure the app takes full height */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Body base styles */
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Main wrapper for content */
+.wrap {
+  max-width: 920px;
+  padding: 40px 16px 28px;
+  margin: 0 auto;
+}
+
+/* Top section spacing */
+.top {
+  margin-bottom: 22px;
+}
+
+/* Small accent dot for logo */
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* Main heading */
+h1 {
+  margin: 0 0 2px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Subtitle text */
+.sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive grid for cards */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card styles */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+/* Card header: flex layout for title and actions */
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.card-head h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Row layout for form controls */
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Input styles */
+.input {
+  flex: 1;
+  appearance: none;
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Button styles */
+.btn {
+  appearance: none;
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: #d7dbe0;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn.ghost {
+  background: #fff;
+  color: var(--text);
+  border: 1px dashed var(--border);
+}
+
+/* Verse display box */
+.verse {
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* Small chip for tags or references */
+.chip {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+/* Main verse text */
+.verse-text {
+  line-height: 1.6;
+  margin: 6px 0 0;
+}
+
+/* Error message styling */
+.err {
+  margin: 6px 0 0;
+  color: var(--err);
+  font-size: 0.95rem;
+}
+
+/* Footer styles */
+.foot {
+  text-align: center;
+  margin-top: 22px;
+  color: var(--muted);
+}
+.foot a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.foot a:hover {
+  text-decoration: underline;
+}
